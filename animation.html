@@ -1,0 +1,66 @@
+<html>
+<head>
+<style>
+	@keyframes test1{
+		25%{
+			background:red;
+		}
+		
+		50%{
+			border-radius:50px;
+		}
+		75%{
+			border-radius:0px l50px 0px 150px;
+		}
+		100%{
+			border-radius:0px;background:green;
+		}		
+	}
+	
+	@keyframes test2{
+		20%{
+			background-image:url('2.jpg');
+		}
+		40%{
+			background-image:url('3.jpg');
+		}
+		60%{
+			background-image:url('4.jpg');
+		}
+		80%{
+			background-image:url('5.jpg');
+		}
+		100%{
+			background-image:url('1.webp');
+		}	
+	}
+	
+	#block1{
+		height:300px;
+		width:300px;
+		margin:auto;
+		background:skyblue;
+		animation:test1;
+		animation-duration:4s;
+		animation-iteration-count:5;
+	}
+	
+	#block2{
+		height:150px;
+		width:150px;
+		background-image:url('1.webp');
+		margin:auto;
+		background-position:center;
+		background-size:100%;
+		animation:test2;
+		animation-duration:4s;
+		animation-iteration-count:infinite;
+	}
+</style>
+</head>
+<body>
+	<div id="block1">Animation will happen here</div>
+	<br>
+	<div id="block2"></div>
+</body>
+</html>
