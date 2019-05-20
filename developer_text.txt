@@ -1,0 +1,41 @@
+<form action="" method="" enctype="">
+	->action: it should name of server side file which will capture user input
+	->method: the container using we send user data to server
+			GET:it is unsecure container
+			POST:it is secure container
+	->enctype: enc type is method of encrption and devryption for this type 	
+</form>
+
+placeholder="Enter Name" 	=>	to give meaning full message to user.
+size="40" 					=>	it will resize width of text box. 
+maxlength="10" 				=>	it will set limit of text in charcater.
+tabindex="1" 				=>	to set sequence of cursor
+value="mytest" 				=>	to display default value
+name="fname" 				=>	work as container to submit form data to server
+id="xyz" 					=>	to communicate with js,ajax ,css,jquery ajax.
+class="mytest"				=>	to communicate with class
+readyonly="readyonly"		=>	to make input field readonly.
+disabled="disabled"			=>	to make input field disabled(non functional)
+
+
+clear:both 
+
+z:index	: 1000
+
+opacity:0.1 to 1.0 //for brightness
+
+Types of list in html
+------------------------------
+	1.OL - order list
+		type = "1"
+		type = "A"
+		type = "a"
+		type = "I"
+		type = "i"
+	2.UL - Unorder List
+		type="disc"
+		type="square"
+		type="circle"
+	3.DL - Defnition List
+------------------------------
+	
