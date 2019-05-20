@@ -1,0 +1,151 @@
+#block1{
+	background-color:red;
+	margin:1%;
+	float:left;
+	width:31.33%;
+	height:200px;
+}
+
+#block2{
+	background-color:rgb(100,40,50);
+	margin:1%;
+	float:left;
+	width:31.33%;
+	height:200px;
+}
+
+#block3{
+	background-color:rgba(100,40,50,0.5);
+	margin:1%;
+	float:left;
+	width:31.33%;
+	height:200px;
+}
+
+#block4{
+	background-image:linear-gradient(red,blue);
+	margin:1%;
+	float:left;
+	width:31.33%;
+	height:200px;	
+}
+
+#block4{
+	background-image:linear-gradient(red,blue);
+	margin:1%;
+	float:left;
+	width:31.33%;
+	height:200px;	
+}
+
+#block5{
+	background-image:linear-gradient(to left,red,blue);
+	margin:1%;
+	float:left;
+	width:31.33%;
+	height:200px;	
+}
+
+#block6{
+	background-image:linear-gradient(to right,red,blue);
+	margin:1%;
+	float:left;
+	width:31.33%;
+	height:200px;	
+}
+
+#block7{
+	background-image:linear-gradient(to top,red,blue);
+	margin:1%;
+	float:left;
+	width:31.33%;
+	height:200px;	
+}
+
+#block8{
+	background-image:linear-gradient(to bottom,red,blue);
+	margin:1%;
+	float:left;
+	width:31.33%;
+	height:200px;	
+}
+
+#block9{
+	background-image:url('1.webp');
+	margin:1%;
+	float:left;
+	width:31.33%;
+	height:200px;
+	background-size:100%;
+		
+}
+
+#bodybg{
+	background:linear-gradient(white,blue,black);
+	margin:0px;		
+}
+
+.title{
+	color:red;
+	text-align:center;
+}
+
+#inf01{
+	text-align:justify;
+	color:orange;
+}
+
+#inf02{
+	text-align:justify;
+	color:white;
+	column-count:2;
+	
+	
+}
+
+#inf03{
+	text-align:justify;
+	color:white;
+	column-count:3;	
+}
+
+#block10{
+		margin:auto;
+		height:200px;
+		width:50%;
+		margin-bottom:100px;
+		box-shadow:0px 0px 76px red;
+		border-radius:20px;
+		background:blue;
+}
+
+.textshadaow1{
+		color:blue;
+		margin:50px;
+		text-align:center;
+		text-shadow:2px 2px 2px red;
+		font-size:40px;	
+}
+
+.textshadaow2{
+		color:blue;
+		margin:50px;
+		text-align:center;
+		text-shadow:3px 10px 5px red;
+		font-size:40px;	
+}
+
+.block12{
+	margin:auto;
+	height:300px;
+	width:300px;
+	background:red;
+	transition:height 3s,width 2s,background 3s;	
+}
+
+.block12:hover{
+	height:400px;
+	width:500px;
+	background:green;
+	
+}
