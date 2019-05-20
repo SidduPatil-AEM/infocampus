@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<style>
+				body{
+					background:skyblue;
+				}
+				
+				#container{
+					margin:auto;
+					min-height:500px;
+					width:80%;
+					padding:10px;
+					background:white;
+					border-radius:5px;
+				}
+				
+				.smallbox{
+					margin:3px;
+					width:23%;
+					float:left;
+					height:200px;
+					background:pink;					
+				}
+				
+				.clearblock{
+					clear:both;
+				}
+				
+				ul{
+					margin:0px;
+					padding:10px;
+					background:black;
+					color:white;
+					font-weight:bold;
+				}
+				
+				li{
+					display:inline;
+					margin-right:20px;
+				}
+				
+				/* media query start */
+				
+				/* media query phone */
+				
+				@media screen and (min-width:1px) and (max-width:650px)
+				{
+					body{
+						background:darkblue;
+					}
+
+					.smallbox{
+						width:98%;
+					}	
+				}
+				
+				/* media query tablet */
+				@media screen and (min-width:651px) and (max-width:800px)
+				{
+					body{
+						background:blue;
+					}
+
+					.smallbox{
+						width:48%;
+					}
+					
+				}
+				
+				@media screen and (min-width:651px) and (max-width:800px)
+				{
+					body{
+						background:blue;
+					}
+
+					.smallbox{
+						width:48%;
+					}	
+				}
+				
+				/* media query for navigation */
+				@media screen and (min-width:1px) and (max-width:900px)
+				{
+					li{
+						display:block;
+						margin-bottom:3px;
+					}
+				} 
+				
+				
+		</style>
+	</head>
+	<body>
+		<h1>CSS 3 Media Query Example</h1>
+		<div id="container">
+			<ul>	
+				<li>Link 1</li>
+				<li>Link 2</li>
+				<li>Link 3</li>
+				<li>Link 4</li>
+				<li>Link 5</li>
+				<li>Link 6</li>
+				<li>Link 7</li>
+				<li>Link 8</li>
+				<li>Link 9</li>
+				<li>Link 10</li>
+			</ul>
+			<div  class="smallbox">1</div>
+			<div  class="smallbox">2</div>
+			<div  class="smallbox">3</div>
+			<div  class="smallbox">4</div>
+			<div  class="smallbox">5</div>
+			<div  class="smallbox">6</div>
+			<div  class="smallbox">7</div>
+			<div  class="smallbox">8</div>
+			<div class="clearblock"></div>
+		</div>
+		</body>
+</html>
+
+<!-- 
+	Desktop :	>801px 
+	Tab : 651px to 800px;
+	Mobile : 1px to 650px
+-->
