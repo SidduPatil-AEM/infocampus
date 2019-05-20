@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="home.css">
+	</head>
+	<body>
+		<ul>Home</ul>
+		<ul>About Us</ul>
+		<ul>Contact Us</ul>
+		<ul>Our Services</ul>
+		<ul>Register</ul>
+		<ul>Sign Up</ul>		
+	</body>	
+</html>

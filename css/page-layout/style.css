@@ -1,0 +1,166 @@
+	body
+		{
+			margin:0px;
+		}
+	  #footer{
+            height:150px;
+            background:darkblue;
+            color:white;
+            text-align:center;			
+	  
+	  }
+	  #info{
+	    background:darkblue;
+		color:white;
+		min-height:20px;
+		padding:5px;
+		padding-left:10%;
+		padding-right:10%;
+	  }
+	  #container{
+	    margin:auto;
+		width:80%;
+		min-height:400px;
+		background:white;
+	  }
+	  #logoblock{
+	   height:70px;
+	   background:white;
+	   padding-left:10%;
+	  }
+	  #topnav{
+	        margin:0px;
+			min-height:30px;
+			background:darkblue;
+			text-align:center;
+			padding-left:10%;
+			padding-right:10%;
+			padding-top:11px;
+	  }
+	  #leftinfo{
+	  
+	  }
+	  #rightinfo{
+	     float:right;
+	  }
+	  .mylist{
+	    display:inline;
+		margin-right:25px;
+		}
+		.mylist a{
+		  color:white;
+		  font-weight:bold;
+		  text-decoration:none;
+		}
+		#activemenu{
+		 border-bottom:2px solid white;
+		 color:red;
+		}
+		.mylist a:hover{
+		border-bottom:2px solid white;
+		 color:red;
+		}
+		#logo{
+			height:50px;
+			width:120px;
+			margin:red;
+			border-radius:50px;
+			padding-top:10px;
+		}
+		.smallimage{
+			width : 32.5%;
+			height : 150px;
+			border-radius:150px;
+			
+		}
+		#container p{
+			text-align : justify;
+		}
+		
+		.smallimage:hover{
+			border-radius : 50%;
+			opacity:0.5;	
+		}
+		#inputblock{
+			width: 350px;
+			margin:auto;
+			margin-top:25px;
+			border-radius:5px;
+			border:2px solid orange;
+			
+		}
+		
+		legend{
+			background:orange;
+			padding:10px;
+			color:white;
+			font-weight:bold;
+			font-size:18px;
+			border-radius:32px 0px 32px 0px; 
+		}
+		#inputblock table{
+			width:100%;
+			
+		}
+		
+		#inputblock table tr{
+			height: 40px;
+		}
+		#inputblock table tr th{
+			text-align:left;
+			color:blue;			
+		}
+		.inputbox{
+			height:27px;
+			width:100%;
+		}
+		.inputbox:focus{
+			border:2px solid red;
+		}
+		.success{
+			color:white;
+			background:darkblue;
+			font-weight:bold;
+			border:none;
+			padding:7px 15px 7px;
+			border-radius:5px;
+		}
+		.success:hover{
+			background:black;
+			padding:9px 20px 9px;
+		}
+		.row{
+			margin-bottom:15px;
+		}
+		.datacenter{
+			text-align:center;
+		}
+		.row label{
+			color:blue;
+		}
+		.left30{
+			width:25%;
+			float:left;
+			margin-right:4%;
+		}
+		.right70{
+			width:71%;
+			float:right;
+		}
+		.clearblock{
+			clear:both;
+		}
+		.serviceimage{
+			margin:1%;
+			padding:1%;
+			width:29.33%;
+			background:skyblue;
+			border-radius:10px;
+			float:left;
+			height :150px;
+		}
+
+		.serviceimage img{
+			height:100%;
+			width:100%;
+		}
