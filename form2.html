@@ -1,0 +1,49 @@
+<html>
+	<body>
+		<form action="test.php" method="POST" enctype="multipart/form-data">
+			<table align="center" cellpadding="10">
+			<caption><h2>Form 2 Example</h2></caption>
+				<tr>
+					<th>Gender</th>
+					<td>
+						<input type="radio" name="gender" id="male" value="M"/>Male
+						<input type="radio" name="gender" id="female" value="F"/>Female
+					</td>
+				<tr>
+					<th>Hobbies</th>
+					<td>
+						<input type="checkbox" name="hobbies[]" id="writing" value="M"/>Writing
+						<input type="checkbox" name="reading[]" id="reading" value="M"/>Reading
+						<input type="checkbox" name="dancing[]" id="dancing" value="M"/>Dancing
+					</td>
+				</tr>
+				<tr>
+					<th>City</th>
+					<td>
+						<select name="city" id="city" >Dancing
+							<option value="#">Choose</option>
+							<option value="1">Bangalore</option>
+							<option value="2">Chennai</option>
+							<option value="3">Mumbai</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>File upload</th>
+					<td>
+						<input type="file" name="userdoc" id="userdoc">
+					</td>
+				<tr>
+				<tr>
+					<th colspan="2">
+						<button type="submit">Send Message</button>
+						<button type="reset">Clear Message</button>
+						<hr color="red" size="1">
+						<a href="form3.html">Go Next</a>
+						<a href="form1.html">Go Back</a>
+					</th>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
