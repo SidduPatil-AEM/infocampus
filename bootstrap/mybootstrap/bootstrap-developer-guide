@@ -1,0 +1,106 @@
+Bootstarp is framework of Html,CSS and Javascript designed to create responsive web page.
+
+Bootstarp is first framework for responsive web design introduced by twitter in 2011.
+
+Bootstarp works on grid system.
+	->Grid system has divided all devices in 4 types
+		1.extra small (1 px to 777 px)
+		2.small device (778 to 990px)
+		3.medium device(991 to 1200px)
+		4.large(>1201 px)
+---------------------------------------------------------------------------------------------
+	For each device bootstrap has given 12 classes
+		1.col-xs-1
+		2.col-xs-2
+		3.col-xs-3
+		4.col-xs-4
+		5.col-xs-5
+		6.col-xs-6
+		7.col-xs-7
+		8.col-xs-8
+		9.col-xs-9
+		10.col-xs-10
+		11.col-xs-11
+		12.col-xs-12
+		-----------------------------------------------
+		small
+		1.col-s-1
+		2.col-s-2
+		3.col-s-3
+		4.col-s-4
+		5.col-s-5
+		6.col-s-6
+		7.col-s-7
+		8.col-s-8
+		9.col-s-9
+		10.col-s-10
+		11.col-s-11
+		12.col-s-12
+		-----------------------------------------------
+		medium
+		1.col-md-1
+		2.col-md-2
+		3.col-md-3
+		4.col-md-4
+		5.col-md-5
+		6.col-md-6
+		7.col-md-7
+		8.col-md-8
+		9.col-md-9
+		10.col-md-10
+		11.col-md-11
+		12.col-md-12
+		-----------------------------------------------
+		Large
+		1.col-lg-1
+		2.col-lg-2
+		3.col-lg-3
+		4.col-lg-4
+		5.col-lg-5
+		6.col-lg-6
+		7.col-lg-7
+		8.col-lg-8
+		9.col-lg-9
+		10.col-lg-10
+		11.col-lg-11
+		12.col-lg-12
+-----------------------------------------------
+	Note - while designing a page using bootstarp follow the structure
+		html->body->container/container-fluid->row->columins(min-1 and max-12). 
+==================================================================================
+container
+row
+For Text Alignment 
+		text-left
+		text-right
+		text=center
+		text-justify
+	
+	Text color
+		text-danger
+		text-success
+		text-info
+		text-warning
+------------------------------------------------------------------------------------
+	For background color
+	bg-info
+	bg-success
+	bg-danger
+	bg-warning
+	well
+	jumbotron
+------------------------------------------------------------------------------------
+	For Image
+		img-responsive
+		img-circle
+		img-rounded
+		img-thumbnail
+-----------------------------------------------------------------------------------
+	for space verticle
+	form-group
+-----------------------------------------------------------------------------------
+
+	
+
+		
+		
