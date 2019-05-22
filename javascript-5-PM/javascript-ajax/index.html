@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="dist/css/bootstrap.css">
+		<script src="ajax.js"></script>
+		<script src="dist/js/jquery.min.js"></script>
+		<script src="dist/js/bootstrap.js"></script>
+	</head>
+	<body onload="readfile('myhome.html'),getnav()">
+		<!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#" onclick="readfile('myhome.html')">Home</a></li>
+            <li><a href="#" onclick="readfile('about.html')">About</a></li>
+            <li><a href="#" onclick="readfile('contact.html')">Contact</a></li>
+			<li><a href="#" onclick="localjson()">Local Json</a></li>
+			<li><a href="#" onclick="externalJson()">External Json</a></li>
+           </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li><a href="../navbar-static-top/">Static top</a></li>
+            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	
+	<div  class="container" style="min-height:450px">
+		<div class="row">
+			<div class="col-sm-3" id="leftnav">
+				
+			</div>
+			<div class="col-sm-9" id="ajaxdata"></div>
+		</div>
+	</div>
+	<div class="container-fluid footer">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h4>This is footer</h4>
+				<p>
+					Hello Hello Hello Hello Hello Hello Hello
+					Hello Hello Hello Hello Hello Hello Hello
+					Hello Hello Hello Hello Hello Hello Hello
+					Hello Hello Hello Hello Hello Hello Hello
+					Hello Hello Hello Hello Hello Hello Hello
+					Hello Hello Hello Hello Hello Hello Hello
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	
+		<!-- Modal -->
+		<div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+			  </div>
+			  <div class="modal-body" id="modaldata">
+				...
+			  </div>
+			 </div>
+		  </div>
+		</div>
+
+	</body>
+</html>

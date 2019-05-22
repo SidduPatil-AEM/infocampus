@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="dist/css/bootstrap.css">
+		<script>
+			
+		</script>
+	</head>
+	<body class="bg-info" onload="getItem()">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h4>Javascript Multidimensional Array Example</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="panel panel-primary">
+						<div class="panel-heading">New Item</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<label>Item Name</label>
+								<input type="text" class="form-control input-sm" id="name"> 
+							</div>
+							<div class="form-group">
+								<label>Item Price</label>
+								<input type="number" class="form-control input-sm" id="price"> 
+							</div>
+							<div class="form-group">
+								<label>Item Quantity</label>
+								<input type="number" class="form-control input-sm" id="qty">
+							</div>
+							<div class="text-center form-group">
+								<button class="btn btn-success btn-sm btn-block" onclick="save()">Save Item</button>
+							</div>
+							<div class="text-center form-group">
+								<button class="btn btn-danger btn-sm btn-block" onclick="getItem()">Show Item</button>
+							</div>
+						</div>	<!-- Panel body end -->
+					</div>	<!-- Panel end -->
+				</div> <!-- Send -->
+			</div>
+			<div class="col-sm-9 well">
+				<table class="table table-bordered table-hover">
+					<thead class="text-danger">
+						<tr>
+							<th>Item Name</th>
+							<th>Item Price</th>
+							<th>Item Quantity</th>
+							<th>Total Price</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					
+					<tbody id="itemlist">
+						<tr>
+							<td colspan="5" class="text-center">No Record!</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+		<script>
+			var item=[
+				{"name":"Apple","price":200,"qty":5}, //0
+				{"name":"Banana","price":30,"qty":10}, //1
+				{"name":"Orange","price":80,"qty":3}, //2
+				{"name":"Mango","price":100,"qty":5} //3
+			];
+			
+			function getItem() 
+			{
+				var data = "";
+				for(i=0;i<item.length;i++)
+				{
+					data+= "<tr>";
+					data+= "<td>"+item[i].name+"</td>";
+					data+= "<td>"+item[i].price+"</td>";
+					data+= "<td>"+item[i].qty+"</td>";
+					data+= "<td>"+(item[i].qty+ item[i].price)+"</td>";
+					data+= "<td> <button onclick='delitem("+i+")'>Del</button> </td>";
+					data+= "</tr>\n";
+				}
+				
+				document.getElementById("itemlist").innerHTML=data;
+			}
+			
+			function save()
+			{
+				var n = document.getElementById("name").value;
+				var p = document.getElementById("price").value;
+				var q = document.getElementById("qty").value;
+				
+				var newArray = {"name":n,"price":p,"qty":q};
+
+				item = item.concat(newArray); 
+				getItem();	// to reload the item list
+			}
+			
+			function delitem(index)
+			{
+			
+				var status = confirm("Are you sure");
+				if(status===true)
+				{
+					item.splice(index,1);
+					getItem();
+				}
+			}
+		</script>
+	</body>
+<html>

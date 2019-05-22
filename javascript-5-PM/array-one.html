@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="dist/css/bootstrap.css">
+		<script>
+			var item = [];
+			function one()
+			{
+				var newitem=document.getElementById('itemname').value;
+				item.push(newitem);
+				two(); // to get length
+				document.getElementById('itemname').value = '';//set empty
+				document.getElementById("msg").innerHTML="Item added"
+			}
+			
+			function two()
+			{
+				var temp="";
+				for(i=0;i<item.length;i++){
+					temp = temp + "<div class='col-md-3'> <p class='well'>"+item[i]+"</p><button class='btn btn-danger' onclick='delany("+i+")'>Delete</button> </div>";
+				}
+				document.getElementById('itemlist').innerHTML=temp;
+			}
+			function delfirst(){
+				item.shift(); //delete first element.
+				document.getElementById("msg").innerHTML="Item Deleted";
+				two();
+			}
+			function dellast(){
+					item.pop(); //delete last element.
+					document.getElementById("msg").innerHTML="Item Deleted";
+					two();
+				
+			}
+			function delany(index){
+				var status=confirm("Are you sure");
+				var itemname = item[index];
+				if(status==true){
+					item.splice(index,1);
+					document.getElementById("msg").innerHTML=itemname+"Deleted";
+					two();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-md-7">
+					<h3>Array one example</h3>
+				</div>
+				<div class="col-md-5">
+					<h3 id="msg"></h3>
+				</div>
+				
+			</div>
+			
+			<div class="row">
+				<div class="col-md-3 well">
+					<label>New Element Name</label>
+					<input type="text" id="itemname" class="form-control input-sm">
+					<br>
+					<button class="btn btn-primary" onclick="one()">Save</button>
+					<button class="btn btn-success" onclick="two()">Display</button>
+					<button class="btn btn-warning" onclick="delfirst()">Delete first</button>
+					<button class="btn btn-danger" onclick="dellast()">Delete Last</button>
+				</div>
+				
+				<div class="col-md-9 text-center" id="itemlist">
+					<p>0 Item!</p>				
+				</div>
+			</div>
+		</div>	
+	</body>
+</html>
