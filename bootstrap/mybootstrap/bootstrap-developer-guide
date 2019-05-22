@@ -99,7 +99,63 @@ For Text Alignment
 	for space verticle
 	form-group
 -----------------------------------------------------------------------------------
-
+	For Table
+		table
+		table-bordered
+		table-hover
+		table-stripped
+	For Tr
+		success
+		warning
+		info
+		danger
+		active
+-------------------------------------------------------------------------------------
+	For left navigation
+		list-group
+		list-group-item
+		active
+-------------------------------------------------------------------------------------		
+	For Pagination
+		pager
+		pagination
+-------------------------------------------------------------------------------------		
+	Panel 
+		panel
+		panel-primary
+		panel-success
+		panel-warning
+		panel-info
+		panel-danger
+		panel-default
+		
+		panel-heading
+		panel-body
+		panel-footer
+-------------------------------------------------------------------------------------
+	button
+		btn
+		btn-primary
+		btn-warning
+		btn-success
+		btn-default
+		btn-small
+		btn-sm
+		btn-lg
+		btn-md
+		btn-block
+	Button Container
+		btn-group
+--------------------------------------------------------------------------------------
+	For Form
+	form-control
+		Note - applicable for all input elements
+		Not applicable for - radio button,checkbox
+--------------------------------------------------------------------------------------
+			
+	`
+		
+		
 	
 
 		
