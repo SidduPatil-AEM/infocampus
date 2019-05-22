@@ -1,0 +1,154 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="dist/css/bootstrap.css">
+		<script>
+			function test()
+			{
+			 var status=true;
+			 
+				//for firstname validation
+				var fname=document.getElementById("fname").value.trim();
+				if(fname == ""){
+					document.getElementById("fname").style.borderColor="red";
+					document.getElementById("fnameerror").innerHTML="Please enter first name!";
+					status=false;
+				}else{
+					document.getElementById("fname").style.borderColor="";
+					document.getElementById("fnameerror").innerHTML='';
+				}
+				
+				//for lastname validation
+				var lname=document.getElementById("lname").value.trim();
+				if(lname == ""){
+					document.getElementById("lname").style.borderColor="red";
+					document.getElementById("lnameerror").innerHTML="Please enter last name!";
+					status=false;
+				}else{
+					document.getElementById("lname").style.borderColor="";
+					document.getElementById("lnameerror").innerHTML="";
+				}
+				
+				//for mobile validation
+				var mobile=document.getElementById("mobile").value.trim();
+				if((mobile == "") || (mobile.length != 10) || (isNaN(mobile))){
+					document.getElementById("mobile").style.borderColor="red";
+					document.getElementById("mobileerror").innerHTML="Please enter mobile number!";
+					status=false; 					
+				}else{
+					document.getElementById("mobile").style.borderColor="";
+					document.getElementById("mobileerror").innerHTML="";
+				}
+				
+				//for email validation
+				var email=document.getElementById("email").value.trim();
+				if(email == "" || (!(isEmailAddress(email)))){
+					document.getElementById("email").style.borderColor="red";
+					document.getElementById("emailerror").innerHTML="Please enter email id!";
+					status=false;
+				}else{
+					document.getElementById("email").style.borderColor="";
+					document.getElementById("emailerror").innerHTML="";
+				}
+				
+				//gender validation
+				var male=document.getElementById("male").checked;
+				var female=document.getElementById("female").checked;
+				
+				if((male == false ) && (female==false)){
+					document.getElementById("gendererror").innerHTML="What is your gender!";
+				}else{
+					document.getElementById("gendererror").innerHTML="";
+				}
+				
+				var tnc=document.getElementById("tnc").checked;
+				
+				if((tnc == false )){
+					document.getElementById("tncerror").innerHTML="Please check terms and condition checkbox";
+				}else{
+					document.getElementById("tncerror").innerHTML="";
+				}
+				
+				alert(status);
+				return false;
+			}//end test() function
+			
+			function clearData(){
+				//removes validation error
+				document.getElementById("gendererror").innerHTML="";
+				document.getElementById("tncerror").innerHTML="";
+				document.getElementById("emailerror").innerHTML="";
+				document.getElementById("mobileerror").innerHTML="";
+				document.getElementById("emailerror").innerHTML="";
+				document.getElementById("lnameerror").innerHTML="";
+				document.getElementById("fnameerror").innerHTML="";
+				
+				
+				//removes border color when clicked on reset
+				document.getElementById("email").style.borderColor="";
+				document.getElementById("mobile").style.borderColor="";
+				document.getElementById("lname").style.borderColor="";
+				document.getElementById("fname").style.borderColor="";
+			}
+			
+			function isEmailAddress(str) {
+				var pattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+				return str.match(pattern);
+			}//email pattern mathch
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<h3 class="text-center">Form Validation Example</h3>
+				
+				<form action="save.php" method="POST" onsubmit="return test()">
+					<div class="form-group">
+						<label>First Name</label>
+						<input type="text" class="form-control input-sm" id="fname">
+						<i id="fnameerror"></i>
+					</div>
+					
+					<div class="form-group">
+						<label>Last Name</label>
+						<input type="text" class="form-control input-sm" id="lname">
+						<i id="lnameerror"></i>
+					</div>
+					
+					<div class="form-group">
+						<label>Mobile Number</label>
+						<input type="text" class="form-control input-sm" id="mobile" maxlength="10">
+						<i id="mobileerror"></i>
+					</div>
+					
+					<div class="form-group">
+						<label>Email Id</label>
+						<input type="text" class="form-control input-sm" id="email">
+						<i id="emailerror"></i>
+					</div>
+					
+					<div class="form-group">
+						<label>Gender</label>
+						<input type="radio" name="gender" id="male" value="M">Male
+						<input type="radio" name="gender" id="female" value="F">Female
+						<i id="gendererror"></i>
+					</div>
+					
+					<div class="form-group">
+						
+						<input type="checkbox" name="tnc" id="tnc" value="Yes"><label>Terms & Condition</label>					
+						<i id="tncerror"></i>
+					</div>
+
+					<div class="form-group text-center">
+						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="reset" class="btn btn-danger" onclick="clearData()" >Clear</button>
+					</div>
+					
+				</form> <!-- Form ends`` -->
+			</div><!-- 6 ends here -->
+			<div class="col-md-3"></div>
+		</div>
+	</body>
+</html>
