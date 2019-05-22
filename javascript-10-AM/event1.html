@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script>
+			function test(){
+				alert('It is working...');
+			}			
+		</script>
+	</head>
+	<body>
+		<center>Javascript Events Examples</center>
+		<p>
+			The type of user interaction to UI
+		</p>
+		
+		<button onclick="test()">Click Here</button>
+		
+		<button ondblclick="test()">2 Click Here</button>
+		
+		<button onmousedown="test()">on left/right click</button>
+		
+		<button onmousemove="test()">Move mouse here</button>
+		
+		<button onmouseout="test()">Touch and Leave</button>
+		
+		Select : <select onchange="test()">
+					<option>Choose</option>
+					<option>Mumbai</option>
+					<option>Pune</option>
+					<option>Bangalore</option>
+				</select>
+				
+		<h3>Javascript Keyboard Events</h3>
+
+		Onkeypress : <input type="text" onkeypress="test()"> <br><br>
+		Onkeydown : <input type="text" onkeydown="test()"> <br><br>
+		Onkeyup : <input type="text" onkeyup="test()"> <br><br>
+		Onfocus : <input type="text" onfocus="test()"> <br><br>
+		Onblur : <input type="text" onblur="test()"> <br><br>
+		
+	</body>
+</html>	

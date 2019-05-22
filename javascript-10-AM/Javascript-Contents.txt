@@ -1,0 +1,35 @@
+Javascript
+	Types of variables and data types
+	function
+	events
+		click
+			1.click
+			2.ondblclick
+			3.onmousedown
+			4.onmousemove
+			5.onmouseout
+			6.onchange
+		keyboard
+			1.
+			2.
+			3.
+			4.
+			5.
+			6.	
+	Data Binding
+		Types of data binding
+	Control Structure
+		condition
+			if else
+			if else if
+			nested if
+			switch case
+		Loop
+			For loop
+			While Loop
+			Do while
+			For Each
+		
+			
+			
+	
