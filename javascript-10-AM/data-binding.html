@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<script>
+			function one()
+			{
+				var a = "Hello Test";
+				document.getElementById('block1').innerHTML=a;
+			}
+			
+			function two()
+			{
+				var b=document.getElementById('block1').innerHTML;
+				alert(b);
+			}
+			
+			function three()
+			{
+				var b=document.getElementById('b1').bgColor='red';
+			}
+			function four()
+			{
+				var b=document.getElementById('b1').bgColor='green';
+			}
+			
+			function five()
+			{
+				var a=document.getElementById('p1').innerHTML;
+				alert(a);
+				document.getElementById('p2').innerHTML=a;
+			}
+		</script>
+	</head>
+	<body id="b1">
+		<center>
+			<h2>Input element data binding</h2>
+			<button onclick="one()">Assign</button>
+			<button onclick="two()">Pick Value</button>
+		</center>
+		
+		<div id="block1">Hello Bangalore</div>
+		
+		<hr color='red'>
+		
+		<button onclick="three()">Red Value</button>
+		<button onclick="four()">Green Value</button>
+		
+		<hr color='red'>
+		
+		<p id="p1">
+			Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
+			Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
+		</p>
+		
+		<p id="p2">
+		
+		</p>
+		
+		<button onclick="five()">Assign p1 to p2 value</button>
+	</body>
+</html>

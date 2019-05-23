@@ -2,22 +2,29 @@ Javascript
 	Types of variables and data types
 	function
 	events
-		click
+		1.click
 			1.click
 			2.ondblclick
 			3.onmousedown
 			4.onmousemove
 			5.onmouseout
 			6.onchange
-		keyboard
+		2.keyboard
 			1.
 			2.
 			3.
 			4.
 			5.
-			6.	
+			6.
+		3.Others
+			body
+				onload
+			Form 
+				onsubmit
 	Data Binding
 		Types of data binding
+			1.for input element		->	.value
+			2.for output element	->	.innerHtml
 	Control Structure
 		condition
 			if else
