@@ -1,0 +1,57 @@
+<html>
+	<head>
+	<script>
+		class Test
+		{
+			constructor()
+			{
+				this.a=0;
+				this.b=0;
+			}
+			
+			get updateValue()
+			{
+				this.a=document.getElementById("n1").value.trim();
+				this.b=document.getElementById("n2").value.trim();
+				this.a=parseInt(this.a);
+				this.b=parseInt(this.b);
+				this.showData;
+			}
+			
+			get showData()
+			{
+				var result = "Addition is : "+(this.a+this.b);
+				document.getElementById("msg").innerHTML=result;
+				this.clearInput;
+			}
+			
+			get clearInput()
+			{
+				document.getElementById("n1").value="";
+				document.getElementById("n2").value="";
+			}
+			
+			get mulData()
+			{
+				var result = "Mul is : "+(this.a * this.b);
+				document.getElementById("msg").innerHTML=result;
+				//this.clearInput;
+			}
+		}//end class
+		
+		const obj= new Test();
+	</script>	
+	</head>
+	<body>
+		<center>
+			<h1 id="msg">Result is - 0</h1>
+			Number 1 :<input type="text" id="n1">
+			Number 2 :<input type="text" id="n2">
+			<br><br>
+			
+			<button onclick="obj.updateValue">Add button</button>
+			<button onclick="obj.showData">Result</button>
+			<button onclick="obj.mulData">Mul</button>
+		</center>
+	</body>
+</html>

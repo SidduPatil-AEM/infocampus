@@ -1,0 +1,37 @@
+<html>
+	<head>
+	<script>
+		class Test
+		{
+			constructor()
+			{
+				this.a=100;
+				this.b=200;
+			}
+			get one()
+			{
+				var b = 500;
+				console.log("Hello World...");
+				console.log(this.a + this.b + b);
+			}
+			get two()
+			{
+				console.log("-------------two---------");
+				console.log(this.a + this.b);
+			}
+			
+			get addboth(){
+				document.getElementById("mytext").innerHTML = this.a + this.b; 
+			}
+		}
+		
+		const obj = new Test();
+		obj.one;
+		obj.two;
+	</script>	
+	</head>
+	<body>
+		<button onclick="obj.addboth">Add Both</button>
+		<h2 id="mytext"></h2>
+	</body>
+</html>

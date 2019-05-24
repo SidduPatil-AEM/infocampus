@@ -1,0 +1,17 @@
+Class 				: collections of memeber variables and methods.
+
+Memebers variables 	: All the variables inside a class declared as global are member variables.
+
+Memeber method 		: All the functions of a class are memeber methods.
+
+Constructor			: to assign value to global variable.
+
+get 				: use to combine variable and memeber function together.
+
+object				: instance of class.
+
+this 				: it is known as current object.
+--------------------------------------------------------------------------------------------------------
+		
+		
+
