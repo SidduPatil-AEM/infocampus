@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<script>
+			function one()
+			{
+				var a = "Hello Test";
+				document.getElementById('block1').innerHTML=a;
+			}
+			
+			function two()
+			{
+				var a = "Hello Test";
+				document.getElementById('block1').innerHTML=a;
+			}
+			
+			function three()
+			{
+				var a = parseInt(document.getElementById("n1").value);
+				var b= parseInt(document.getElementById("n2").value);
+				var c= parseInt(document.getElementById("n3").value);
+				
+				var d = a+ b+c;
+				
+				if(d%2==0){
+					var data =d*d;
+				}else{
+					if(d.toString().length >= 5){
+						var data = d + " is a plus digits number";	
+					}else{
+						var data = d + " is less than 5 digits number";
+					}//inner else
+				}//outer else 
+				document.getElementById('msg').innerHTML = data;
+			}
+			function four()
+			{
+				var a = prompt("Enter your gender");
+				if(a=="male"){
+					document.getElementById('msg').innerHTML='You are male';
+				}else if(a=="female"){
+					document.getElementById('msg').innerHTML='You are female';
+				}else{
+					document.getElementById('msg').innerHTML='Invalid';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Java script Condition Example</h1>
+		<h1 id="msg"></h1>
+		<button onclick="one()">If else</button>
+		<button onclick="two()">If else if</button>
+		
+		<button onclick="four()">What my gender</button>
+		
+		<hr color="red" size="1">
+		
+		Number 1 : <input type="number" id="n1"><br><br>
+		Number 2 : <input type="number" id="n2"><br><br>
+		Number 3 : <input type="number" id="n3"><br><br>
+		<button onclick="three()">Nested If</button>
+	</body>
+</html>
+		

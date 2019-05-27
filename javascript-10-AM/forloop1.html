@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<script>
+			function test(pnumber){
+				for(var i=1;i<= 5;i++)
+				{
+					document.getElementById(i).style.display="	none";				
+				}
+				document.getElementById(pnumber).style.display="block";
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Java script css none / Show using switch case</h1>
+		<button onclick="test('1')">1</button>
+		<button onclick="test('2')">2</button>
+		<button onclick="test('3')">3</button>
+		<button onclick="test('4')">4</button>
+		<button onclick="test('5')">5</button>
+		
+		<p id="1">This is one</p> 
+		<p id="2">This is two</p> 
+		<p id="3">This is three</p> 
+		<p id="4">This is four</p> 
+		<p id="5">This is five</p> 
+	</body>
+</html>
