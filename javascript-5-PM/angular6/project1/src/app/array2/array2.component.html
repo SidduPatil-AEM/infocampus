@@ -1,0 +1,28 @@
+<table class="table table-bordered">
+  <caption>Array 2 Example</caption>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+    <th>Action</th>
+  </tr>
+
+<tr>
+  <td><input type="text" #uname placeholder="Name" class="form-control" [(ngModel)]="fullname" #uname></td>
+  <td><input type="text" #city placeholder="City" class="form-control" [(ngModel)]="userage" #city></td>
+  <td><input type="text" #age placeholder="Age" class="form-control" [(ngModel)]="usercity" #age></td>
+  <td><button class="btn btn-primary btn-sm" (click)="saveuser(uname.value,city.value,age.value)">Save</button></td>
+</tr>
+
+  <tr *ngFor="let x of user;let i=index;">
+      <td>{{x.name}}</td>
+      <td>{{x.age}}</td>
+      <td>{{x.city}}</td>
+
+      <td>
+        <button class="btn btn-danger btn-sm" (click)="deluser(i)">
+            <i class="glyphicon glyphicon-trash"></i>
+        </button>
+      </td>
+  </tr>
+ </table>

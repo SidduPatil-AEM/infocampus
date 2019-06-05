@@ -1,0 +1,14 @@
+<h3>Array 1 Example</h3>
+<div class="form-group">
+  <label>Full Name</label>
+  <input type="text" class="form-control input-sm" [(ngModel)]="username" #name>
+</div>
+<div class="text-center">
+    <button class="btn btn-primary" (click)="saveuser(name.value)">Save User</button>
+</div>
+
+<br/>
+
+<div class="col-sm-6 form-group" *ngFor="let x of myUser">
+  <p class="well">{{x}}</p>
+</div>

@@ -1,0 +1,8 @@
+[
+    {"name":"Apple","price":200,"Qty":500},
+    {"name":"Mango","price":80,"Qty":10},
+    {"name":"Orange","price":100,"Qty":40},
+    {"name":"Grapes","price":100,"Qty":20},
+    {"name":"Desktop","price":20000,"Qty":10},
+    {"name":"Mouse","price":300,"Qty":5}
+]

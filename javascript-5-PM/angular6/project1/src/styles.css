@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    padding-top:60px !important;
+}
+
+.footer{
+    height: 200px;
+    background:darkblue;
+    color:white;
+    margin-top: 20px;
+}
+
+.pageContent{
+    min-height: 500px;
+}
