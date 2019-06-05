@@ -1,0 +1,47 @@
+<html>
+<head>
+    <script src='dist/js/jquery.min.js'></script>
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <script>
+        $(function(){
+            $("#btn1").click(function(){
+                  $("p").load("msg.txt");  
+            });
+
+            $("#btn2").click(function(){
+                  $("p").text("");  
+            });
+        })
+    </script>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h3>Jquery File Read example</h3>
+                <button id="btn1" class="btn btn-success">Read Data</button>
+                <button id="btn2" class="btn btn-warning">Empty Data</button>
+                <br><br>
+                <p class="jumbotron">
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+
+                </p>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script src="dist/js/jquery.min.js"></script>
+        <script>
+            //html javascript interaction
+            // 1. By ID
+            // 2. By Class
+            // 3. Tag Name
+            // 4.   
+
+            //short form
+            $(function(){
+                $("button").click(function(){
+                    $("p").hide();
+                });
+            });
+            
+            //full form
+            $(document).ready(function(){
+                alert("Hi");
+            });
+        </script>
+    </head>
+    <body>
+        <button>Hide</button>
+        <button>Show</button>
+
+        <p>para 1</p>
+        <p>para 2</p>
+        <p>para 3</p>
+        <p>para 4</p>
+        <p>para 5</p>
+    </body>
+
+</html>

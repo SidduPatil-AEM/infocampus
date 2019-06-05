@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='dist/js/jquery.min.js'></script>
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <script>
+        $(function(){
+            $("#btn1").click(function(){
+                  $("p").slideUp();  
+            });
+
+            $("#btn2").click(function(){
+                  $("p").slideDown();  
+            });
+
+            $("#btn3").click(function(){
+                  $("p").slideToggle();  
+            });
+        })
+    </script>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h3>Jquery Slide updown example</h3>
+                <button id="btn1" class="btn-success">Slide Up</button>
+                <button id="btn2" class="btn-warning">Slide Down</button>
+                <button id="btn3" class="btn-danger">Slide Toggle</button>
+                <br><br>
+                <p class="jumbotron">
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+                    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+
+                </p>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script src='dist/js/jquery.min.js'></script>
+     <script>
+        $(function(){
+            $("#btn1").click(function(){
+                  $("#msg").text("<h1> Hello This is as text </h1>");  
+            });
+
+            $("#btn2").click(function(){
+                  $("#msg").html("<h1>Hello This is as text</h1>")  
+            });
+        })
+    </script>
+</head>
+<body>
+    <h3>Jquery .html() .text() example</h3>
+    <button id="btn1">As text</button>
+    <button id="btn2">As HTML</button>
+
+    <div id="msg"></div>
+ </body>
+</html>

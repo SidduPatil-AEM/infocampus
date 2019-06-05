@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script src="dist/js/jquery.min.js"></script>
+        <script>
+            //html javascript interaction
+            // 1. By ID(Individual)
+            // 2. By Class(Group)
+            // 3. Tag Name
+            // 4.   
+
+            $(function(){
+                //"slow"
+                //"fast"
+                //ms - milliseconds - 5000
+                $("#btn1").click(function(){
+                    $("p").hide("slow");
+                });
+
+                $("#btn2").click(function(){
+                    $("p").show("fast");
+                });
+
+                $("#btn3").click(function(){
+                    $("p").toggle(5000);
+                });
+
+                $("#btn4").click(function(){
+                    $("#one").hide();
+                });
+
+                $("#btn5").click(function(){
+                    $(".two").hide();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button id="btn1">Hide</button>
+        <button id="btn2">Show</button>
+        <button id="btn3">Hide/Show</button>
+
+        <button id="btn4">Hide By ID</button>
+        <button id="btn5">Hide By Class</button>
+        <p id="one">para 1</p>
+        <p id="one">para 2</p>
+        <p class="two">para 3</p>
+        <p class="two">para 4</p>
+        <p class="two">para 5</p>
+    </body>
+</html>
