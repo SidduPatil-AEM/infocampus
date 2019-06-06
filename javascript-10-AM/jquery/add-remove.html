@@ -1,0 +1,25 @@
+<html>
+<head>
+    <script src='dist/js/jquery.min.js'></script>
+     <script>
+        $(function(){
+            var i=1;
+            $("#btn1").click(function(){
+                  $("div").after("<p>This para "+i+"</p>");
+                  i++;  
+            });
+
+            $("p").click(function(){
+                 $(this).hide();
+            });
+        })
+    </script>
+</head>
+<body>
+    <h3>Jquery Add remove</h3>
+
+    <button id="btn1">Add New</button>
+
+    <div>This is from division</div>
+    </body>
+</html>

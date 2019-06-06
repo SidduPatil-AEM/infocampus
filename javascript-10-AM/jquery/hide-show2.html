@@ -1,0 +1,47 @@
+<html>
+<head>
+    <script src='dist/js/jquery.min.js'></script>
+     <script>
+        $(function(){
+            $(".pro").click(function(){
+                 if($("#exp:checked").length == 1){
+                     $("#freblock").hide();
+                     $("#expblock").show();
+                 }else{
+                    $("#expblock").hide();
+                     $("#freblock").show();   
+                 }
+
+            });
+        })
+    </script>
+
+    <style>
+        #freblock{display: none}
+    </style>
+</head>
+<body>
+<center>
+        <p>
+            <input type="radio" id="exp" class="pro" name="pro">Experience
+            <input type="radio" id="fre" class="pro" name="pro">Fresher
+        </p>
+
+        <table id="expblock" bgcolor="red" width="50%">
+            <caption>Experience</caption>
+            <tr>
+                <th>Total Exp</th>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+
+        <table id="freblock" bgcolor="skyblue" width="50%">
+            <caption>Fresher</caption>
+            <tr>
+                    <th>% Marks</th>
+                    <td><input type="text"></td>
+                </tr>        
+        </table>
+</center>
+</body>
+</html>
