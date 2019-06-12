@@ -39,6 +39,18 @@
                         </ul>
              </div>   
         </div>
+
+        <hr>
+
+        <div>
+            <div class="row">
+                <div class="col-md-12" id="addata">
+                    No preview
+                </div>
+            </div>
+
+        </div>
+
         <div class="row" style="background: blue;color:white;">
             <div class="col-md-12 text-center">
                     <h5>This is from footer</h5>
@@ -124,7 +136,79 @@
                     }
                 });//ajax call end
             });//user list end here
+
+            $("#inbox").click(function(){
+                $.ajax({
+                    url:"email.json",
+                    type:"POST",
+                    dataType:"json",
+                    success:function(response){
+                        //json parsing start
+                        var data="";
+                        for(var i=0;i<response.length;i++)
+                        {
+                            data += "<tr>";
+                            data += "<td>"+response[i].from+"</td>";
+                            data += "<td>"+response[i].subject+"</td>";
+                            data += "<td>"+response[i].message+"</td>";
+                            data += "</tr>";
+                        }
+                        var thead="<tr class='danger'><th>From</th><th>Subject</th><th>Message</th></tr>";
+                        var tableopen="<table class='table table-bordered'>";
+                        var tableclose="</table>";
+                        var alldata =tableopen+thead+data+tableclose;
+                        $("#pagedata").html(alldata);
+                        //json parsing end
+                       // $("#pagedata").text(response);
+                    }
+                });//ajax call end
+            });//inbox end here
+
+            $("#profile").click(function(){
+                $("#pagedata").html("<h2 class='text-center'>My Profile</h2>");
+                setTimeout(getdata,1000);
+
+                var counter=1;
+                function getdata()
+                {
+                    switch(counter)
+                    {
+                        case 1: 
+                        $("#pagedata").append("<h3>Contact Information</h3>");
+                        break;
+
+                        case 2: 
+                        $("#pagedata").append("<h3>Education Information</h3>");
+                        break;
+
+                        case 3: 
+                        $("#pagedata").append("<h3>Professional Information</h3>");
+                        break;
+
+                    }
+                    
+
+                    setTimeout(getdata,2000);//function calling itself
+                    counter++;
+                }
+            });//profile end here
         });//jquery end
     </script>
+
+    <script>
+        function loadad()
+            {
+                $.ajax({
+                    type:"POST",
+                    url:"https://www.firstenquiry.com/analytics/getad.php?webid=2",
+                    success:function(response){
+                        $("#addata").html(response);
+                    }
+                });
+                setTimeout(loadad, 3000);// to change the add
+            }
+        setTimeout(loadad, 1000);//to call the add
+    </script>
+
 </body>
 </html>

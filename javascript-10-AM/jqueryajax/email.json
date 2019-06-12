@@ -1,0 +1,9 @@
+[
+    {"from":"aaa@gmail.com","subject":"Test Mail","message":"How are you"},
+    {"from":"bbb@gmail.com","subject":"Test 2 Mail","message":"How are you"},
+    {"from":"ccc@gmail.com","subject":"Test 3 Mail","message":"How are you"},
+    {"from":"ddd@gmail.com","subject":"Test 4 Mail","message":"How are you"},
+    {"from":"eee@gmail.com","subject":"Test 5 Mail","message":"How are you"},
+    {"from":"fff@gmail.com","subject":"Test 6 Mail","message":"How are you"},
+    {"from":"ggg@gmail.com","subject":"Test 7 Mail","message":"How are you"}
+]
