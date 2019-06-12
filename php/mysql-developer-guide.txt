@@ -1,0 +1,403 @@
+	Mysql is database language, use to store data for future use.
+	Mysql is open source
+	Mysql we will study in 2 ways
+		->GUI (Graphical user interface)
+		->CLI (Command Line Interface)
+		
+	DDL - Database definition language
+	DML - database manipulation language
+		DDL
+			create database
+			drop database
+			create table
+			drop table
+			rename table
+			add column
+			rename column
+			drop column
+			Add constraint
+			drop constraint
+			truncate
+		DML
+			insert data 
+			fetch data 
+			update data 
+			delete data
+----------------------------------------------------------
+	Database Definition Language(DDL)
+		How to create database ?
+			Syntax:
+				create database <databasename>;
+			Example:
+				create database fullstack;
+------------------------------------------------------------
+	  How to drop database from mysql ?
+		Syntax:
+			drop database <databaseName>;
+		Example:
+			Drop database fullstack;
+-------------------------------------------------------------
+	How to create table in mysql ?
+		syntax:
+			create table <tablename>
+			(
+				colName1	datatype(length) constraint,
+				colName2	datatype(length),
+				colName3	datatype(length)
+			);
+		Example:
+			create table user
+			(
+				userid		int(10) primary key auto_increment,
+				name		varchar(100),
+				mobile		bigint(13),
+				age			varchar(100)
+			);
+			
+		EXAMPLE 2 :
+			create table contact
+			(
+				id			int(10) primary key auto_increment,
+				fullname	varchar(100),
+				emailid		varchar(100),
+				message		text(1000)
+			);
+		
+		Example 3 :
+		
+			create table product
+			(
+				pid		int(10) primary key auto_increment,
+				pname	varchar(200),
+				price   float,
+				qty		int(10),
+				description	 text(1000)
+			);
+--------------------------------------------------------------------
+		How to rename table in mysql ?
+			Syntax:
+				rename table <oldName> to <newName>;
+			
+			Example
+				rename table product to item;
+---------------------------------------------------------------------
+		How to drop a table in mysql ?
+			Syntax:
+				drop table <tablename>;
+			Example:
+				drop table user;
+---------------------------------------------------------------------
+		How to add new column in existing mysql table ?
+			1. in begning
+				syntax:
+					alter table <tablename>
+					add <colname> first;
+				
+				Example:
+					alter table user 
+					add test1 int(10) first;
+					
+				Example 2 : to add after specific
+				
+					alter table user 
+					add gender varchar(100) after name;
+				
+				Example 3  to add in last
+					alter table user
+					add dob date;
+---------------------------------------------------------
+	How to add multiple columns ad different location
+		Example :
+			alter table user 
+			 add city varchar(100),
+			 add pincode int(10) first,
+			 add address text(100) after pincode;
+---------------------------------------------------------
+	How to drop a coumn from mysql table 
+		Syntax:
+			alter table <tablename>
+			drop column <columnName>;
+		Example:
+			alter table user 
+			drop column test1,
+			drop column address;
+--------------------------------------------------------------
+	How to show structure of table ?
+		explain <tablename>;
+			example : explain user;
+		
+		descibe <tablename>
+			Example: describe user;
+--------------------------------------------------------------
+    How to change/modify column of a table 
+		Syntax:
+			alter table <tablename>
+			change <oldcolname>  <newcolname>;
+		Example:
+			alter table user
+			change address fulladdress text(1000);
+-----------------------------------------------------------------
+	Drop table user;
+	
+	create table user 
+		(
+			id 		int(10) primary key auto_increment,
+			name	varchar(100),
+			email	varchar(100),
+			city	varchar(100),
+			mobile	bigint(13),
+			salary	int(10)
+		);
+=====================================================================
+	DML
+		How to insert data in mysql table
+			1. syntax:
+				insert into <tableName>
+				 set
+				colName1 = 'newValue',
+				colName2 ='newValue',
+				colName3 = 'new Value';
+				
+			Example:
+				INSERT INTO user
+				  SET
+				mobile='9999999',
+				city='Bangalore',
+				name='Mr Abc';
+			
+			2. Syntax:
+				insert into <tablename>(colname1, colname2, colname3)
+							values('val1', 'val2', 'val3');
+				
+				Example:
+					insert into user(name, city, salary)
+							values('Mr xxxxx', 'Mumbai', '12000');
+				
+				
+			
+			3. Syntax: (we have to pass value for all columns)
+				insert into <tableName>
+				values('val', 'val2', 'val3', 'val4', 'val5', 'val6');
+				
+				Example: 
+				
+					insert into user
+				values('', 'Hari', 'hari@gmail.com', 'Pune', '878767', '5000');
+				
+-------------------------------------------------------------------
+			How to insert multiple rows using single query
+			
+				insert into user(name , city , salary, mobile)
+					values('Mahesh', 'Pune', '12000', '8789876564'),
+						  ('Gahesh', 'Delhi', '11000', '8767654345'),
+						  ('Suresh', 'Mumbai', '25000', '8888888888'),
+						  ('Ravi', 'Pune', '21000', '7777777777'),
+						  ('Sami', 'Delhi', '21000', '555555555'),
+						  ('Mukesh', 'Pune', '21000', '7777777777'),
+						  ('Sanvi', 'Bangalore', '21000', '44444444444'),
+						  ('Madan', 'Pune', '21000', '666666666'),
+						  ('john', 'Delhi', '44444', '8888888888'),
+						  ('Alex', 'Mumbai', '2312', '9999999999');
+-----------------------------------------------------------------------
+		How many ways , we can fetch data from mysql table ?
+			1. 
+				syntax:
+				select * from <tablename>
+				Example
+				select * from user;  // it will fetch all rows and all columns
+				
+			2.
+				syntax:
+					select colname1, colname2, colname3 from <tablename>;
+				Example:
+					select name, city from user;
+--------------------------------------------------------------------------
+       Order by : to arrange the result in asc / desc order
+		syntax:
+			select * from <tablename> order by colname asc / desc;
+		example:
+			select * from user order by name asc;
+			
+			select * from user order by name desc;
+-------------------------------------------------------------------------
+	Group By : to filter the unique records row wise.
+		syntax:
+			select * from <tablename> group by <columnName>;
+		example:
+			select * from user group by city;
+		
+			select * from user group by city order by name;
+--------------------------------------------------------------------------
+	Note : group by to filter unique records
+		   order by to arrange the records in asc / desc order 
+--------------------------------------------------------------------------
+	Like : to seach the records from table on given pattern
+		1. 
+			select * from <tablename> where <colname> like pattern
+			example:
+				select * from user where name like 'a%';
+					// where name start with a char
+				select * from user where name like '_a%'; // 2nd char a
+			
+				select * from user where name like '%a'; // end with char a
+				select * from user where name like '%a%'; // anywhere char a
+-----------------------------------------------------------------------
+	IN / NOT IN 
+		IN : To fetch records random
+			syntax:
+				select * from <tablename> where <colname> in(conditions...);
+			Example:
+				select * from user where id in(1, 5, 7, 100);
+			
+			Example2:
+				select * from user where id not in(1, 5, 7, 100);
+----------------------------------------------------------------------
+	Between : to fetch records of a given range in sequence.
+		syntax:
+			select * from <tablename> where <colname> between <min> and <max>;
+			
+		Example:
+			select * from user where salary between 4000 and 15000;
+			
+			select * from user where salary between 4000 and 15000 order by salary asc;
+==========================================================================
+	Operators
+		 =
+		!=
+		>
+		<
+		AND
+		OR 
+------------------------------
+	select * from user where id=3;
+------------------------------
+	select * from user where id !=3
+--------------------------------
+	select * from user where id > 3
+---------------------------------
+	select * from user where id < 3
+----------------------------------
+	select * from user where id > 3 and city='Bangalore'
+	
+	id should > 3 
+		AND
+	city should be bangalore
+	
+--------------------------------------
+	select * from user where id > 3 OR city = 'Bangalore'
+	
+	id should > 3 
+		OR
+	city should be bangalore
+	
+	Any one should match
+--------------------------------------
+	Functions :
+		How to find total number of rows in mysql table ?
+		Syntax: select count(*) from <tablename>
+		Example: select count(*) from user;
+		
+		Example :
+--------------------------------------------------------
+	select count(*) as totaluser from user;
+--------------------------------------------------------
+	max() => to find max value from column
+		Syntax:
+			select max(colname) as maxValue from <tablename>;
+		Example:
+			select max(salary) as maxSalary from user;
+-----------------------------------------------------------
+	Min()  => to find min value
+		Example:
+			select min(salary) as minSal from user;
+-----------------------------------------------------------
+	Avg()  =>To find average value for all;
+		Example:
+			select avg(salary) as averageSal from user;
+-----------------------------------------------------------
+	Count() => to find total occurance according conditions
+		Example
+			select count(id) as totalCount from user;
+-----------------------------------------------------------
+	password() => to convert into 64 based encoding
+		Example:
+			select password(mobile) as mobileno from user;
+------------------------------------------------------------
+	md5()  => it one side encoding , decoding is not possible
+	    Syntax: 
+            select md5(colname) as password from <tablename>;
+			
+		Example:
+			select md5(city) as userpassword from user;
+-------------------------------------------------------------
+	Distinct => to fetch unique record from table, but suitable for single column
+	Syntax:
+		select distinct <colname>  from tablename;
+		
+	Example:
+		select distinct city from user;
+====================================================================
+		Types of keys in mysql
+	1. candidate key
+	2. primary key
+	3. alternate key
+	4. foreign key
+	5. composite key
+====================================================================
+	create table user
+	(
+		id		int(10) primary key auto_increment,
+		name	varchar(100),
+		mobile	bigint(13),
+		city	int(10),
+		age		varchar(100),
+		dob		date
+	);
+---------------------------------------------------------------------
+	Candidate Key : in a table all the columns are candidate key.
+---------------------------------------------------------------------
+    primary key : it is a type candidate, that make relation between 2 or more table
+	        entity intigrity : 
+				1. it should not contain null value
+				2. it should not contain duplicate value
+    
+	
+	Alternate key : alternate use form the composite key
+	       alternate key = candidate key - primary key
+	
+	composite key : the combination of multiple alternate key is composite key
+	   Note :  composite key is always non visible
+	   
+	   Example :
+	     select * from user where name like 'z%' and mobile like '98%'
+	
+	foreign key : it is reference of primary key, it also make relation between 2 tables only.
+	    Rule : it should not contain null value
+		       it should contain same as primary key value.
+			   
+			   
+			create table city(
+				id			int(10) primary key auto_increment,
+				cityname	varchar(100)
+			);  
+			   
+			   
+			insert into city(cityname)
+			       values('bangalore'),
+				          ('mumbai'),
+						   ('pune'),
+						   ('chennai'),
+						   ('delhi');
+	
+	How to make foreign key
+		
+		
+		alter table user 
+		add constraint city
+		foreign key(city)
+		references city(id);
+		
+		
+		
+		
+	
