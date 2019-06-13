@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="dist/css/bootstrap.css">
+        <script src="dist/js/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $("#btn1").click(function(){
+
+                    //full name validation
+                    var fname=$("#fname").val();
+                    if(fname == ""){
+                        $("#fname").css({"border":"1px solid red"});
+                        $("#nameerror").text("Please enter your name !");
+                    }else{
+                        $("#fname").css({"border":""});
+                        $("#nameerror").text("");
+                    }
+
+                    //for radio button    
+                    if($(".gender:checked").length===0){
+                        $("#gendererror").html("<p>Please select your gender</p>");
+                    }
+
+                    //for checkbox validation
+                    if($("#tnc:checked").length===0)
+                    {
+                        $("#tncerror").html("<p>Please select terms and conditions</p>");
+                    }else{
+                        $("#tncerror").html("");
+                    }
+
+                    //textarea message validation
+                    var msg=$("#msg").val();
+                    if(msg == ""){
+                        $("#msg").css({"border":"1px solid red"});
+                        $("#msgerror").text("Please enter message");
+                    }else{
+                        $("#msg").css({"border":""});
+                        $("#msgerror").text("");
+                    }
+                })//btn1 end
+
+                $("#btn2").click(function(){
+                    $("#fname").css({"border":""});
+                    $("#fname").val("");
+                    $("#nameerror").text("");
+                    $("#msgerror").text("");
+                    $("#gendererror").html("");
+                    $("#tncerror").html("");
+                    $(".gender").prop("checked",false);
+                    $("#tnc").prop("checked",false);
+                })//reset button end
+            });//jquery end
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h3>Form Validation Using Jquery</h3>
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="fname" class="form-control">
+                        <i id="nameerror" class="text-danger"></i>
+                    </div>
+
+                    <div class="form-group">
+                            <label>Gender</label>
+                            <input type="radio" class="gender" name="gender" value="Male">Male
+                            <input type="radio" class="gender" name="gender" value="Female">FeMale
+                            <i id="gendererror" class="text-danger"></i>
+                    </div>
+
+                    <div class="form-group">
+                            <label>Terms & Conditions</label><br>
+                            <input type="checkbox" id="tnc" value="Yes">
+                            I am agree
+                            <i id="tncerror" class="text-danger"></i>
+                    </div>
+
+                    <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="msg"  class="form-control"></textarea>
+                            <i id="msgerror" class="text-danger"></i>
+                    </div>
+
+                    <div class="form-group">
+                            <label>City</label>
+                            <select id="city" class="form-control">
+                                <option>Choose</option>
+                                <option value="1">Bangalore</option>
+                                <option value="2">Mumbai</option>
+                                <option value="3">Chennai</option>
+                            </select>
+                            <i id="cityerror" class="text-danger"></i>
+                    </div>
+                    
+                    <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" id="email" class="form-control">
+                            <i id="emailerror" class="text-danger"></i>
+                    </div>
+
+                    <div class="form-group">
+                            <label>Password</label>
+                            <input type="text" id="password" class="form-control">
+                            <i id="passworderror" class="text-danger"></i>
+                    </div>
+
+                    <div class="form-group">
+                            <label>Confirm Password</label>
+                            <input type="text" id="confirmpassword" class="form-control">
+                            <i id="confirmpassworderror" class="text-danger"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary" id="btn1">Save</button>
+                        <button class="btn btn-danger" id="btn2">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
