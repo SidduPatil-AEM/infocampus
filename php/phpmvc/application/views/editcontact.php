@@ -1,6 +1,5 @@
 <h3 align = "center">Welcome Contact Us</h3>
-
-<form action="<?php echo BASEURL;?>welcome/updatecontact" method="post">
+<form action="updatecontact" method="post">
 <table align="center">
     <tr>
         <td>Full Name</td>
@@ -23,7 +22,7 @@
     </tr>
     <tr>
         <th colspan="2">
-            <button type="submit">Send Message</button>
+            <button type="submit">Update</button>
             <button type="reset">Clear Message</button>
         </th>
     </tr>

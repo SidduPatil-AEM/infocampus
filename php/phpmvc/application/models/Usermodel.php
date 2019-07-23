@@ -57,6 +57,7 @@ class Usermodel extends CI_Model
     }
     
     public function photolist() {
+        $this->db->where("userid",$this->session->userdata("id"));
         $data = $this->db->get("photo");
         return $data->result();
     }

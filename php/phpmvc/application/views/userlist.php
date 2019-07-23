@@ -1,4 +1,4 @@
-<table align="center" cellpadding="0">
+<table align="center" cellpadding="10" cellspacing="10">
     <caption>User List</caption>
     <tr>
         <th>Id</th>

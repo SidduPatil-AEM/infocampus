@@ -11,6 +11,7 @@
                 <th><a href="<?php echo BASEURL;?>dashboard/index">Home</a></th>
                 <th><a href="<?php echo BASEURL;?>dashboard/allcontact">Contact List</a></th>
                 <th><a href="<?php echo BASEURL;?>dashboard/userlist">User List</a></th>
+                <th><a href="<?php echo BASEURL;?>dashboard/newphoto">New Photo</a></th>
                 <th><a href="<?php echo BASEURL;?>dashboard/photolist">Photo List</a></th>
                 <th>
                 	Welcome - <?php echo $this->session->userdata('name'); 	?> -
