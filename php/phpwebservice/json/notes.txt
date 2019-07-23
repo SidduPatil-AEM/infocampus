@@ -1,0 +1,2 @@
+http://www.firstenquiry.com/api/getkeyword		->	getkeyword.josn
+http://www.cybotrix.com/webservice/getuser.php	->  getuser
