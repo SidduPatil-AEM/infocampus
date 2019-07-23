@@ -397,7 +397,88 @@
 		foreign key(city)
 		references city(id);
 		
-		
+-----------------------------------------------------------------------------------------------------
+		insert into user(name,mobile,city,age) 
+				value ('User1','99999999','1','20 years'),
+					  ('User2','88888888','2','30 years'),
+					  ('User3','55555555','3','40 years'),
+					  ('User4','22222222','4','50 years'),
+					  ('User5','22222222','4','50 years'),
+					  ('User6','22222222','1','50 years'),
+					  ('User7','22222222','4','50 years');
+-----------------------------------------------------------------------------------------------------
+		city 1 : 2
+		city 2 : 1
+		city 3 : 1
+		city 4 : 3
+		city 5 : 0	user
+-----------------------------------------------------------------------------------------------------
+			Joins => use to retrive matching records from multiple tables.
+			1.direct join(**) : it fetch full matching records from all inter related tables.
+				Syntax : 
+					select table1.*,table2.* 
+						from table1,table2
+						where table1.primary key= table2.foreign key
+
+			Example :
+				select city.*,user.*
+					from city,user
+					where city.id = user.city
+					
+			Example :		
+				select city.cityname,user.name,user.mobile,user.age from city,user where city.id = user.city
+
+			Example : 		
+				select a.cityname,b.name,b.mobile,b.age from city as a,user as b where a.id=b.city
+-----------------------------------------------------------------------------------------------------
+			2.Inner Join : It also fetch/retieve full matching records but compare to direct join execution is slow.
+				Syntax :
+					select table1.*,table2.* 
+						from table1
+						inner join table2 on table1.primary key = table2.foreign key
+						inner join table3 on table1.primary key = table3.foreign key
+			Example : 
+				select city.*,user.*
+					from city 
+					inner join user on city.id=user.city
+				
+				select city.cityname,user.id,user.name
+					from city 
+					inner join user on city.id=user.city order by city.cityname;	
+-----------------------------------------------------------------------------------------------------
+			3.Left Join(**) : it fetch all records from the main table and only matching record from dependent table
+				Syntax :
+					select table1.*,table2.* 
+						from table1
+						left join table2 on table1.primary key = table2.foreign key
+						left join table3 on table1.primary key = table3.foreign key
+				Example 1: 
+				select city.*,user.*
+					from city 
+					left join user on city.id=user.city	
+					
+				Example 2: 
+				select city.cityname,user.id,user.name
+					from city 
+					left join user on city.id=user.city
+					order by city.cityname;	
+-----------------------------------------------------------------------------------------------------
+			4.Right Join : it fetch all records from second table & only matching records from main table.
+				Syntax :
+					select table1.*,table2.* 
+						from table1
+						right join table2 on table1.primary key = table2.foreign key
+						right join table3 on table1.primary key = table3.foreign key
+				Example 1: 
+				select city.*,user.*
+					from city 
+					right join user on city.id=user.city
+-----------------------------------------------------------------------------------------------------
+			5.Left Outer:same like left join 
+				select city.cityname,user.id,user.name
+				from city
+				left outer join user on city.id=user.city
+				order by city.cityname;		
 		
 		
 	

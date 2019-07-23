@@ -1,0 +1,13 @@
+CodeIgnitor
+
+---> install codeignitor and delete all files and keep index.php
+---> keep the dist folder
+---> open lms globe-->WA-->CA-->url rewrite download ht.zip
+and copy .htaccess and paste in codeignitor folder
+open .htaccess file  remove assets and add dist
+
+--> rename the folder codeigniter and write phpmvc copy and paste in xampp -->htdocs folder
+application -->controllers
+
+to call on browser application/welcome(class name)/aboutus.php
+-----------------------------------------------------------------------------------------------
