@@ -1,0 +1,32 @@
+create table myorder
+(
+    orderid int(10) primary key auto_increment,
+	productid int(10),
+	qty    int(10),
+	price   float,
+	totalprice float,
+	status     varchar(20),
+	orderdate  varchar(100),
+	deliverydate varchar(100)
+);
+
+
+create table uservisit
+(
+   id   int(10)primary key auto_increment,
+   ip   varchar(100),
+   datetime  varchar(100)
+   
+);
+
+
+create table user
+(
+   uid int(10) primary key auto_increment,
+   name varchar(100),
+   email varchar(100),
+   password  varchar(100),
+   mobile  bigint(13),
+   pincode int(10),
+   address text(100)
+);
