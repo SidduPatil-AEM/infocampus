@@ -1,0 +1,12 @@
+create database myphp
+
+create table user
+(
+	id int(10) auto_increment primary key,
+	name varchar(100),
+	mobile bigint(13),
+	email varchar(100),
+	password varchar(100)
+);
+
+INSERT INTO user2 VALUES (1, 'Amrutha', '222222', 'abc@gmail.com', '1234'), (1, 'aassd', '111111', 'azx@gmail.com', '1111');
