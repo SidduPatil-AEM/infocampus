@@ -8,12 +8,17 @@ class Dashboard extends CI_Controller {
         parent::__construct();
         $this->load->library("session");
         $this->load->model("Usermodel");
+        if($this->session->userdata("id")=="")
+        {
+            $this->session->set_flashdata("msg","Bad Request,Please Login!");
+            header("Location:../welcome/login");
+        }
     } 
     
 	public function index()
 	{
 		$this->load->view("myheader");
-		$this->load->view('myhome');
+		$this->load->view('mytest');
 		$this->load->view("footer.php");
 	}
 	

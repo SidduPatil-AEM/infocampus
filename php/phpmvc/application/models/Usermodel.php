@@ -11,6 +11,16 @@ class Usermodel extends CI_Model
         parent::__construct();
         $this->db = $this->load->database("default", TRUE);
     }
+    
+    public function getproduct() {
+        $alldata = $this->db->get("product");
+        return $alldata->result();
+    }
+    
+    public function getcategory() {
+        $alldata = $this->db->get("category");
+        return $alldata->result();
+    }
 
     public function savecontact($arraydata) {
         $this->db->insert("contact",$arraydata);//insert as per codeigniter
@@ -76,6 +86,5 @@ class Usermodel extends CI_Model
         }
         return false;
     }
-    
 }
 ?>

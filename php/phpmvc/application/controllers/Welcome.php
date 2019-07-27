@@ -12,8 +12,10 @@ class Welcome extends CI_Controller {
     
 	public function index()
 	{
+	    $data['product']=$this->Usermodel->getproduct();
+	    $data['cat']=$this->Usermodel->getcategory();
 		$this->load->view("header.php");
-		$this->load->view('mytest');
+		$this->load->view('mytest',$data);
 		$this->load->view("footer.php");
 	}
 
