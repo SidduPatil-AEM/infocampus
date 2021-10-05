@@ -1,3 +1,3 @@
 RewriteEngine on
-RewriteCond $1 !^(index\.php|phpinfo\.php|dist|application)
+RewriteCond $1 !^(index\.php|phpinfo\.php|dist|admin|application)
 RewriteRule ^(.*)$ index.php?/$1 [QSA,L]

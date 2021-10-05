@@ -1,4 +1,7 @@
 <html>
+<head>
+	<link rel="stylesheet" href="<?php echo BASEURL ?>dist/css/bootstrap.css" ></link>
+</head>
     <body>
         <table align="center" cellpadding="7">
             <tr>
